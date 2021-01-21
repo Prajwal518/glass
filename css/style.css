@@ -31,6 +31,24 @@
   z-index: 2;
   -webkit-backdrop-filter: blur(0.9rem);
           backdrop-filter: blur(0.9rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__dashboard {
+  width: 40%;
+  height: 40%;
+  position: relative;
+}
+
+.main h3 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  color: #BB87ED;
 }
 
 .circle1, .circle2 {
@@ -51,5 +69,88 @@
 .circle1-bottom {
   top: 59%;
   left: 13%;
+}
+
+.form {
+  z-index: 5;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+}
+
+.form input {
+  background: white;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 20px;
+  border: hidden;
+  margin-bottom: 10px;
+}
+
+.form__lablename {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.form__lablename::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 60px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.form__lablename1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 56%;
+  pointer-events: none;
+}
+
+.form__lablename1::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 14px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.contentname {
+  position: absolute;
+  left: 0px;
+  bottom: 60px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contentname1 {
+  position: absolute;
+  left: 0px;
+  bottom: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .form__labelname1 {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 /*# sourceMappingURL=style.css.map */

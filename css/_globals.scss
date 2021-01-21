@@ -6,6 +6,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+//background
 .main {
     min-height: 100vh;
     background: linear-gradient(to right top, $background-linear);
@@ -13,7 +14,8 @@
     align-items: center;
     justify-content: center;
 
-    &__glass{
+    &__glass{// glass box 
+
         background: $white;
         min-height: 80vh;
         width: 60%;
@@ -21,9 +23,24 @@
         border-radius: 2rem;
         z-index: 2;
         backdrop-filter: blur(0.9rem);
+        display: flex;
+    }
+    &__dashboard{
+        width: 40%;
+        height: 40%;
+        position: relative;
+    }
+    & h3 {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-family: 'Sacramento', cursive;
+        font-size: 3rem;
+        color: $text;
     }
 }
 
+//background circles
 .circle1, .circle2 {
     background: $white;
     background: linear-gradient(to right bottom, $background-linear-circle);
@@ -40,3 +57,66 @@
     top: 59%;
     left: 13%;
 }   
+
+//form
+.form {
+    z-index: 5;
+    width: 250px;
+    height: 100px;
+     position: absolute;
+    left: 45%;
+    top: 40%;
+
+    & input {
+        background: $white;
+        opacity: 0.1;
+        width: 100%;
+        height: 100%;
+        color: $input;
+        padding-top: 20px;
+        border: hidden;
+        margin-bottom: 10px;
+    }
+    &__lablename {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 60px;
+            height: 100%;
+            width: 100%;
+            border-bottom: 3px solid $border_input;
+        }
+    }
+    &__lablename1 {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 56%;
+        pointer-events: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 14px;
+            height: 100%;
+            width: 100%;
+            border-bottom: 3px solid $border_input;
+            
+        }  
+    }
+}
+
+//content in label
+
+//style label after clicking
+
